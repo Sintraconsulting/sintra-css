@@ -1,0 +1,471 @@
+
+
+
+                  
+                                                                                                            
+
+                  
+                              
+                     
+
+    
+
+ 
+ 
+ 
+                        
+
+	
+
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>Home - Foam Royal</title>
+    <meta name="Description" content="Visita lo Shop Online e scopri l'ampia selezione di Magliette, felpe, t-shirt di tendenza" />
+    <meta name="Keywords" content="T-shirt, T-shirt di tendenza, tendenze, Tutto quello che c'è da sapere su T-shirt di tendenza" />
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<script type="text/javascript" src='http://www.stalkmebrand.com/images/common/grouped/jq183-jqui1824-fbox21-jqval-jqmob-jqeas13-cam134fix-cform-jqeqh10.js'></script>
+
+<link href="http://www.stalkmebrand.com/images/common/fancybox/2.1/jquery.fancybox.css" type="text/css" rel="stylesheet"/>
+<link href="http://www.stalkmebrand.com/images/common/camera/1.3/camera.css" type="text/css" rel="stylesheet"/>
+<link href="http://www.stalkmebrand.com/images/common/css_jquery/css_jquery.css" type="text/css" rel="stylesheet"/>
+
+     <link href="http://www.stalkmebrand.com/images/common/ecomm_jquery/css_ecomm_jquery_v2.css" type="text/css" rel="stylesheet"/>
+ 
+
+
+
+                                                                                       <link href="http://www.stalkmebrand.com/images/style.css?template=servizi_web_1&ts=1384855999374" type="text/css" rel="stylesheet"/>
+                  <link href="http://cdn.oneminutesite.it/common_files/fixing_style.css" type="text/css" rel="stylesheet"/>                 
+                                           
+ <script type="text/javascript">
+jQuery(document).ready(function($){
+	$(window).resize(function(){
+   	$('.product-catalog-view-grid .product-item').equalHeights(260,415); 
+	});
+	$(window).resize();
+});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+ 
+<script type="text/javascript">
+        var translations = {
+    'error.required':"Campo obbligatorio",
+    'error.ecommerce.product_not_available' : "Prodotto non disponibile",
+    'error.ecommerce.product_quantity_exceeded' : "Quantità massima raggiunta per il prodotto selezionato",
+    'error.ecommerce.product_child_not_selected' : "E' necessario selezionare la variante del prodotto",
+    'error.email' : "Il campo email non &egrave; valido",
+    'error.ecommerce.cart_empty' : "Carrello vuoto",
+    'label.remove' : "Rimuovi",
+    'label.ecommerce.checkout.title' : "Completa l'Ordine"
+};
+
+function getTranslation(key){
+    if (key in translations){
+        return translations[key];
+    }
+    return key;
+}
+
+jQuery.validator.messages.required = getTranslation("error.required");
+jQuery.validator.messages.email = getTranslation("error.email");</script>
+
+     
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+                $(window).resize(function(){
+                $('.product-catalog-view-grid .product-item').equalHeights(260,300); 
+                });
+                $(window).resize();
+        });
+    </script>
+
+        <script type="text/javascript" src='http://www.stalkmebrand.com/images/common/simpleCart.js'></script>
+    <script type="text/javascript">
+        var updateCartView_original;
+var cartEnabled=
+        true
+;
+if (typeof simpleCart == 'object'){
+    simpleCart.currency = EUR;
+    simpleCart.updateCartView_original = simpleCart.updateCartView;
+    simpleCart.updateCartView = function(){
+        simpleCart.updateCartView_original();    
+        $("#Cart .itemRemove a").html('Rimuovi');
+    }
+            simpleCart.shippingFlatRate = 8.00;
+    }
+
+
+$(document).ready(function(){
+    
+    if (typeof cartForm == "undefined"){
+        cartForm = $('#cartForm');
+    }
+    if (cartForm.size() > 0){
+        cartForm.validate({
+            submitHandler:doPayment, 
+            ignore:'[type=hidden]',
+            rules:{
+                fe_buyer_email:{
+               
+                    email:true
+                }
+           
+            }
+        }) ;
+   
+                                     $("#fe_buyer_name").rules("add","required");
+                                                 $("#fe_buyer_lastname").rules("add","required");
+                                                 $("#fe_buyer_address").rules("add","required");
+                                                 $("#fe_buyer_city").rules("add","required");
+                                                 $("#fe_buyer_state").rules("add","required");
+                                                 $("#fe_buyer_zipcode").rules("add","required");
+                                                 $("#fe_buyer_email").rules("add","required");
+                                                 $("#fe_buyer_1375388753431").rules("add","required");
+                                                                      $("#fe_buyer_1384168764857").rules("add","required");
+                        }
+  
+});
+
+/** FUNZIONI PER IL CARRELLO **/
+
+/**
+ * I parametri name e price non vengono più utilizzati, devono rimanere nella firma
+ * della funzione per motivi di retrocompatibilità con la chiamata nel file ecommerce.js
+ */
+function addToCart(id,name,price,quantity){
+    if (cartEnabled){
+        var product = store.products[id];
+        var max_quantity = product.product_quantity;
+        var item = getCartItemById(id);
+        if (max_quantity == 0){
+            alert('Prodotto non disponibile');
+        }
+        else if (item != null && (item.quantity + quantity) > max_quantity){
+            alert('Quantità massima raggiunta per il prodotto selezionato');
+        }else{
+            simpleCart.add(id,null,quantity);
+        }
+        
+    }
+}
+
+
+
+    </script>
+    <script type="text/javascript" src='http://www.stalkmebrand.com/images/common/ecommerce.js'></script>
+ 
+<script type="text/javascript">
+        var slideshowGalleries = new Array();
+
+	$(document).ready(function($) {
+            if ($(".fancybox").size()>0)
+            {
+		$(".fancybox").fancybox({
+                    helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			
+			thumbs	: {
+				width	: 80,
+				height	: 80
+			}
+                    }
+                });
+            }
+
+            for (var i = 0; i < slideshowGalleries.length; i++){
+                var containerId = slideshowGalleries[i];
+                var dataNoResize = $("#"+containerId+" .camera_wrap").data("noresize");
+                if (dataNoResize==null || dataNoResize == undefined || dataNoResize=='' || dataNoResize==false || dataNoResize=='false')
+                    dataNoResize=false;
+                else
+                    dataNoResize=true;
+                $("#"+containerId+" .camera_wrap").camera({
+                        easing: 'easeInOutExpo',
+                        alignment: 'center',
+                        fx:'scrollLeft',
+                        thumbnails:false,
+                        loader:'none',
+                        time:4000,
+                        transPeriod:1000,
+                        portrait: dataNoResize,
+                        importantPositioning:dataNoResize
+                });
+            }
+	});
+</script>
+
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-45621154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+              <script type="text/javascript">
+         //Array dove saranno messi id dei div e gli indirizzi
+var maps_array = new Array();
+//Array con gli oggetti maps associati ai div
+var maps_object_array = new Array();
+var geocoder_object_array = new Array();
+
+var geocoder;     //Questa funzione richiama e include il javascript di coogle
+function initLoader() {
+    var script = document.createElement("script");
+    script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=createMaps";
+    script.type = "text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+//Questa funzione crea le mappe
+function createMaps() {
+    if (geocoder == null) {
+        geocoder = new google.maps.Geocoder();
+    }
+    for (var i = 0; i < maps_array.length; i++) {
+        var id = maps_array[i][0];
+        var indirizzo = maps_array[i][1];
+        if (maps_object_array[id] == null) {
+            var map = new google.maps.Map(document.getElementById("map_" + id), {
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoomControl:true,
+                panControl:true,
+                streetViewControl:false
+            });
+            maps_object_array[id] = map;
+
+        }
+
+        showAddressMultiple(indirizzo, maps_object_array[id]);
+    }
+}
+
+//Funzione che ottiene il geocode e cambia l'indirizzo'
+function showAddressMultiple(address, map) {
+    if (geocoder) {
+        geocoder.geocode({
+            address: address
+        }, function(results, status) {
+
+            if (status == google.maps.GeocoderStatus.OK) {
+                var bestResult = results[0];
+
+                map.setCenter(bestResult.geometry.location);
+                map.setZoom(13);
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: bestResult.geometry.location
+                });
+            }
+        });
+    }
+}         </script>
+
+                                </head>
+<body id="page1" class="page_id_1 page_pos_1 page_url_index sidebar-0  page-type-2" onload="pageLoad()">
+         <div id="wrapper" class="right ">
+        <div class="tail-top">
+            <div class="tail-bottom">
+                <div class="main">
+                     <div id="header">
+                           <ul id="menu_1" class="menu_1">
+                                                <li class="png first">
+                              
+                                         
+                                        
+            <a class="current" href="http://www.stalkmebrand.com/index.html" title="Home"  >
+                Home
+            </a>
+        </li>
+                                                    <li class="png">
+             
+                          
+                                        
+            <a class="" href="http://www.stalkmebrand.com/shop.html" title="Shop"  >
+                O firmie
+            </a>
+        </li>
+                                                    <li class="png">
+             
+                          
+                                        
+            <a class="" href="http://www.stalkmebrand.com/boutique_ufficiali.html" title="Boutique Ufficiali"  >
+                Materace
+            </a>
+        </li>
+                                                    <li class="png">
+             
+                          
+                                        
+            <a class="" href="http://www.stalkmebrand.com/chi_siamo.html" title="Chi siamo"  >
+                Akcesoria
+            </a>
+        </li>
+                                                    <li class="png">
+                                                    
+                                                                <a class="" href="http://www.stalkmebrand.com/chi_siamo.html" title="Chi siamo"  >
+                Kontakt
+            </a>
+        </li>
+                                                    <li class="png">
+             
+                                             </ul>
+             <ul id="menu_2" class="menu_2">
+                                 </ul>
+       
+       
+                     <div class="name">
+         
+         
+                         
+                                         <div id="header_image_div" style="float:left;">
+                <a href="http://www.stalkmebrand.com">
+                    <img style="height:80px;width:160px;padding-top:10px;" alt="" src="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/logo.png"/>
+                </a>
+                </div>
+             
+                         
+                                                   </div>
+
+                 <div id="top_image" class=""
+                 >
+                     </div>
+</div>                    <div id="content" class="png">
+                        <div class="indent-main">
+                            <div class="container">
+                                
+<div id="breadcrumbs">
+    <p>
+        <a href="http://www.stalkmebrand.com">Home</a>
+                                            &nbsp;&gt;&nbsp;<strong>Home</strong>
+                        </p>
+</div>
+                                <div class="col-1">
+                                    <h1>Home</h1>
+                                                          
+       
+             
+      
+                                                 <div  class="div_central div_gallery" id="ttil_1" style="clear:both;">    
+                     
+             <div class="camera_wrap" data-noresize='false'>
+    
+            
+                    
+                                          <div data-src="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/2.jpg"
+                     >
+                      </div>                
+                    
+                                          <div data-src="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/3.jpg"
+                     >
+                      </div>                
+                    
+                                          <div data-src="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/4.jpg"
+                     >
+                      </div>                
+                    
+                                          <div data-src="http://www.stalkmebrand.com/files/280-bandeOk8.jpg"
+                     >
+                      </div>                
+                    
+                                          <div data-src="http://www.stalkmebrand.com/files/207-home_2.jpg"
+                     >
+                      </div>                
+            
+</div>      
+</div>
+
+ <script type="text/javascript">
+    slideshowGalleries.push("ttil_1");
+</script>       
+             
+      
+                            
+       
+             
+      
+                             
+                                     
+                                                 <div class="div_central div_ttil omsfloat-50" id="ttil_2" style="clear:none">
+                           
+          <div class="abstract object_content">
+                                 <a href="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/Materace.jpg">
+                  <img style="float: left; width: 448px; clear: both; display: inline; margin: 5px;" alt="" src="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/Materace1.jpg"float:left;"/>
+                     </a>
+                  
+                         <h2 class="h2_ttil" style="float: left; margin: 15px 0 20px; padding-bottom: 0; width: 100%;"><a href="http://www.stalkmebrand.com/boutique_ufficiali.html"><span>Materace</span> </a></h2>
+<p>Podstawę materacy termoelastycznych Foam Royal stanowi piana wysokoelastyczna Platinum Foam, stanowiąca rdzeń materaca i podstawę dla pianki termoelastycznej Fit Foam. </p>            </div>
+</div>
+             
+      
+                            
+       
+             
+      
+                             
+                                     
+                                                 <div class="div_central div_ttil omsfloat-50" id="ttil_3" style="clear:none">
+                           
+          <div class="abstract object_content">
+                                 <a href="http://www.stalkmebrand.com/chi_siamo.html">
+                  <img style="float: left; clear: both; display: block; margin: 5px; height: 140px; width: 448px;" alt="" src="https://dl.dropboxusercontent.com/u/262071056/Foam%20Royal/logo1.jpg"float:left;"/>
+                     </a>
+                  
+                         <h2 class="h2_ttil" style="float: left; margin: 15px 0 20px; padding-bottom: 0; width: 100%;"><a href="http://www.stalkmebrand.com/chi_siamo.html"><span> O firmie</span> </a></h2>
+<p>Foam Royal ma zaszczyt wyposażać Państwa sypialnie od 1995 roku, ciesząc się uznaniem kilkudziesięciu tysięcy zadowolonych klientów.
+<p>
+</p> </p>            </div>
+</div>
+             
+      
+                                                 <div id="bottom_content"></div>
+                                </div>
+                                <style type="text/css">
+                                    .submenu{
+                                        padding:5px;
+                                    }
+                                </style>
+
+                                                                                                                                                            </div>
+                        </div>
+                    </div>
+                    <div id="footer">
+    <div id="footer_contents" class="footer-indent">
+                               <div class="copy">© 2013 Fima Style s.r.l. All rights reserved.<br>
+        <a onclick="openModalDialog('/condizioni_privacy.shtml','Condizioni sulla privacy')" href="javascript:void(0)">Privacy Policy</a> - <a onclick="openModalDialog('/condizioni_uso.shtml','Condizioni di utilizzo del sito')" href="javascript:void(0)">Terms & Conditions</a></div>
+        <div class="mail"><a target="_blank" href="mailto:info@stalkmebrand.com">info@stalkmebrand.com</a></div>
+        <div class="social">
+        	<span>Follow us:</span>
+        	<a target="_blank" href="https://www.facebook.com/pages/Stalkme/386245774824771?ref=hl" id="fb">&nbsp;</a>
+            <a target="_blank" href="https://twitter.com/STALKMEbrand" id="tw">&nbsp;</a>
+            <a target="_blank" href="http://www.youtube.com/user/stalkmebrand" id="yt">&nbsp;</a>
+            <a target="_blank" href="http://instagram.com/stalkmebrand" id="is">&nbsp;</a>
+        </div>
+      <script type="text/javascript">
+    function pageLoad(){
+        }
+</script>
+
+
+    </div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
