@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-apr-2015, 14.37.40
+    Author     : NeNe
+*/
+
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1,2em;
+        width: 600px!important;
+        margin: 0 auto;
+        border:1px solid #ccc!important;
+}
+
+.logo 
+{
+        text-align:center;
+        margin: 10px auto;
+        display: block;
+        border:0px none;
+        border-spacing: 0px;
+}
+
+.testo
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 17px; 
+    color: #666; 
+    text-align: center; 
+    line-height: 26px; 
+    margin-bottom: 20px;
+}
+
+.testo .title
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 26px; 
+    text-align: center; 
+    color: #666; 
+    margin-top: 20px;
+}
+
+.pulsante
+{
+    color: #fff; 
+    text-decoration: none; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px;
+    background-color: #bd020b; 
+    text-align: center; 
+    text-transform: uppercase;
+    padding: 8px 42px;
+}
+
+.content
+{
+    width:100%;
+}
+
+.content-img
+{
+    width:100%;
+}
+
+.footer
+{
+    width: 100%;
+    clear:both!important;
+    background-color: #e6e6e6; border-top: 2px solid #e6e6e6;
+}
+
+
+.footer p
+{
+    padding:15px 0px 15px;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 13px; line-height: 18px; 
+    margin-left: 5px; 
+    margin-right: 5px; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    color: #646464; 
+    text-align: center;
+}
+
+.annulla{
+    font-size: 0.8em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body{width: 100%!important}
