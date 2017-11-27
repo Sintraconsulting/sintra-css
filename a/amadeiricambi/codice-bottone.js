@@ -4,6 +4,29 @@
  * and open the template in the editor.
  */
 
+function ExecuteWhenSelectorHasItems(baseSelector, selector, action,limit) {
+
+    var baseItem = document.querySelectorAll(baseSelector);
+
+    console.log("Before check right page:" + baseSelector + " with count:" + baseItem.length);
+    if (baseItem.length < 1&&limit===0) return;
+    var counter = 0;
+    var check = function () {
+        var inputs = document.querySelectorAll(selector);
+        console.log("Items:" + inputs.length + " for selector:\n" + selector);
+        if (inputs.length > 0||(limit>0&&counter>limit)) {
+            console.log("Before action run");
+            action();
+            //console.log("After action run");
+        }
+        else {
+            counter++;
+            setTimeout(check, 50); // check again in a second
+        }
+    }
+    check();
+}
+
 function modificaContenutoECreaBottoneIndietro(){
 	console.log("Ho iniziato a processare il contenuto");
   // Divide product name
@@ -71,4 +94,5 @@ function modificaContenutoECreaBottoneIndietro(){
   }
 }
 console.log("before setTimeout")
-setTimeout(modificaContenutoECreaBottoneIndietro,1000);
+
+ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
