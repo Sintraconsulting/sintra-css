@@ -70,4 +70,5 @@ function modificaContenutoECreaBottoneIndietro(){
 	  console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
   }
 }
+console.log("before setTimeout")
 setTimeout(modificaContenutoECreaBottoneIndietro,1000);
