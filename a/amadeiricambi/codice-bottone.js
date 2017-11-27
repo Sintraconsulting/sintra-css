@@ -5,6 +5,7 @@
  */
 
 (function(){
+	console.log("Ho iniziato a processare il contenuto");
   // Divide product name
   if(document.querySelector('.product-name a')) {
     let productName = document.querySelectorAll('.product-name a'),
@@ -36,6 +37,7 @@
   
   //Add back button on product page
   if(document.querySelector('body.ecommerce-product-page')) {
+	  console.log("Sto creando il bottone per pagina precedente");
     let paginaPrec="Pagina Precedente";
     
     var isEnglish = document.querySelector(".lan_en.active");
@@ -64,6 +66,8 @@
     backElem.classList.add('btn-back', 'fa', 'fa-reply');
     backElem.appendChild(backElemNode);
     document.querySelector('#page_title').appendChild(backElem);
+  }else{
+	  console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
   }
   
 })()
