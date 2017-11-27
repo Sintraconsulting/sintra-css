@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-(function(){
+function modificaContenutoECreaBottoneIndietro(){
 	console.log("Ho iniziato a processare il contenuto");
   // Divide product name
   if(document.querySelector('.product-name a')) {
@@ -69,5 +69,5 @@
   }else{
 	  console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
   }
-  
-})()
+}
+setTimeout(modificaContenutoECreaBottoneIndietro,1000);
