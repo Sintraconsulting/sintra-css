@@ -10,7 +10,7 @@
 
     function doWork() {
         require(['jquery', 'domReady!'], function($) {
-            $( ".page_url_index  #contact_form_6 ).insertBefore( ".page_url_index #top_image" );
+            $( '.page_url_index  #contact_form_6' ).insertBefore( '.page_url_index #top_image' );
         });
     }
 })();
