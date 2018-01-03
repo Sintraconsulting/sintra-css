@@ -10,7 +10,10 @@
 
     function doWork() {
         require(['jquery', 'domReady!'], function($) {
-            $( '.page_url_index  #contact_form_6' ).insertBefore( '.page_url_index #top_image' );
+            if ( $('body.oms-edit').length !== 1 ) {
+                $( '.page_url_index  #contact_form_6' ).insertBefore( '.page_url_index #top_image' );
+                $('.contact-header').closest('.div_central').remove();
+            }
         });
     }
 })();
