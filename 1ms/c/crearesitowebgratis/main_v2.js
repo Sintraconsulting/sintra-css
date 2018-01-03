@@ -10,10 +10,15 @@
 
     function doWork() {
         require(['jquery', 'domReady!'], function($) {
-            if ( $('body.oms-edit').length !== 1 ) {
-                $( '.page_url_index  #contact_form_6' ).insertBefore( '.page_url_index #top_image' );
-                $('.contact-header').closest('.div_central').remove();
-            }
+            if ( $('.oms-edit').length !== 1 ) {
+              var innerForm = $('.contact-header').closest('.row')[0].innerHTML
+              innerForm = `<div class="form-box">${innerForm}</div>`;
+              $('.contact-header').closest('.row')[0].innerHTML = innerForm;
+
+              $( '.form-box' ).insertBefore( '.top-image-content' );
+              $('.contact-header').closest('.div_central').addClass('toRemove');
+              $('.toRemove').remove();
+           }
         });
     }
 })();
