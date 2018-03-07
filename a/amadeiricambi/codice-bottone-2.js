@@ -74,14 +74,17 @@ function modificaContenutoECreaBottoneIndietro(){
     var isEnglish = document.querySelector(".lan_en.active");
     var isItalian = document.querySelector(".lan_it.active");
 	  
-    let prevPage="Pagina Precedente",goToQuotation="Preventivo";
+    let prevPage="Pagina Precedente",goToQuotation="Preventivi";
     if (isEnglish) {
         prevPage= "Previous Page";
-	goToQuotation = "Quotation";
+	goToQuotation = "Estimates";
     }
     let backElem = createButton(prevPage,"#","window.history.back()","btn-back");
     document.querySelector('#page_title').appendChild(backElem);	
-    let preventivoElem=createButton(goToQuotation,"/preventivo.html","","btn-preventivo");
+    let preventivoLink=document.querySelector('[title=Preventivi]').href;
+    if(isEnglish)
+	preventivoLink=document.querySelector('[title=Estimates]').href;
+    let preventivoElem=createButton(goToQuotation,preventivoLink,"","btn-preventivo");
     document.querySelector('#page_title').appendChild(preventivoElem);
   }else{
     console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
