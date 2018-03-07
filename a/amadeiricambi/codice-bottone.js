@@ -82,7 +82,7 @@ function modificaContenutoECreaBottoneIndietro(){
     let backElem = createButton(prevPage,"#","window.history.back()","btn-back");
     document.querySelector('#page_title').appendChild(backElem);	
     let preventivoElem=createButton(goToQuotation,"/preventivo.html","","btn-preventivo");
-    document.querySelector('#page_title').appendChild(backElem);
+    document.querySelector('#page_title').appendChild(preventivoElem);
   }else{
     console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
   }
