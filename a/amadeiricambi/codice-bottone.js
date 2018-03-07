@@ -31,7 +31,7 @@ function createButton(content,href,onclick,css_class){
         backElemNode = document.createTextNode(content);
     backElem.setAttribute('href', href);
     if(onclick!=="")
-    	backElem.setAttribute('onclick', "window.history.back()");
+    	backElem.setAttribute('onclick', onclick);
     backElem.classList.add(css_class, 'fa', 'fa-reply');
     backElem.appendChild(backElemNode);
     return backElem;
