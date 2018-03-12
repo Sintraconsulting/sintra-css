@@ -74,17 +74,16 @@ function modificaContenutoECreaBottoneIndietro(){
     var isEnglish = document.querySelector(".lan_en.active");
     var isItalian = document.querySelector(".lan_it.active");
 	  
-    let prevPage="Pagina Precedente",goToQuotation="Richiedi un Preventivo";
+    let prevPage = "Pagina Precedente", goToQuotation = "Preventivi", selector = "Preventivi";
     if (isEnglish) {
-        prevPage= "Previous Page";
-	goToQuotation = "Estimates";
+        prevPage = "Previous Page";
+		goToQuotation = "Estimates";
+		selector = "Estimates";
     }
     let backElem = createButton(prevPage,"#","window.history.back()","btn-back","fa-reply");
     document.querySelector('#page_title').appendChild(backElem);	
-    let preventivoLink=document.querySelector('[title=Preventivi]').href;
-    if(isEnglish)
-	preventivoLink=document.querySelector('[title=Estimates]').href;
-    let preventivoElem=createButton(goToQuotation,preventivoLink,"","btn-preventivo","fa-share");
+    let preventivoLink = document.querySelector('[title=' + selector + ']').href;
+    let preventivoElem = createButton(goToQuotation,preventivoLink, "", "btn-preventivo", "fa-share");
     document.querySelector('#page_title').appendChild(preventivoElem);
   }else{
     console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
