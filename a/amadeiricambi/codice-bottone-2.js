@@ -26,13 +26,13 @@ function ExecuteWhenSelectorHasItems(baseSelector, selector, action,limit) {
     }
     check();
 }
-function createButton(content,href,onclick,css_class){
+function createButton(content,href,onclick,css_class1,css_class2){
     let backElem = document.createElement('a'),
         backElemNode = document.createTextNode(content);
     backElem.setAttribute('href', href);
     if(onclick!=="")
     	backElem.setAttribute('onclick', onclick);
-    backElem.classList.add(css_class, 'fa');
+    backElem.classList.add(css_class1,css_class2, 'fa');
     backElem.appendChild(backElemNode);
     return backElem;
 }
@@ -79,12 +79,12 @@ function modificaContenutoECreaBottoneIndietro(){
         prevPage= "Previous Page";
 	goToQuotation = "Estimates";
     }
-    let backElem = createButton(prevPage,"#","window.history.back()","btn-back fa-reply");
+    let backElem = createButton(prevPage,"#","window.history.back()","btn-back","fa-reply");
     document.querySelector('#page_title').appendChild(backElem);	
     let preventivoLink=document.querySelector('[title=Preventivi]').href;
     if(isEnglish)
 	preventivoLink=document.querySelector('[title=Estimates]').href;
-    let preventivoElem=createButton(goToQuotation,preventivoLink,"","btn-preventivo fa-share");
+    let preventivoElem=createButton(goToQuotation,preventivoLink,"","btn-preventivo","fa-share");
     document.querySelector('#page_title').appendChild(preventivoElem);
   }else{
     console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
