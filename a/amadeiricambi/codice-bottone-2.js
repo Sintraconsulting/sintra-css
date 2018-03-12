@@ -74,7 +74,7 @@ function modificaContenutoECreaBottoneIndietro(){
     var isEnglish = document.querySelector(".lan_en.active");
     var isItalian = document.querySelector(".lan_it.active");
 	  
-    let prevPage="Pagina Precedente",goToQuotation="Preventivi";
+    let prevPage="Pagina Precedente",goToQuotation="Richiedi un Preventivo";
     if (isEnglish) {
         prevPage= "Previous Page";
 	goToQuotation = "Estimates";
