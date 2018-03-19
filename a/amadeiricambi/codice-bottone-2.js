@@ -100,7 +100,10 @@ function ProdottiEditor() {
     for (var i = 0; i < items.length; i++) {
         var item = items.item(i);
         var itemName = item.querySelector(".product-name a");
-        itemName.innerHTML = itemName.innerHTML.replace(" (SKU", "\n <span> (SKU").replace(")", ")</span>");
+        console.log(itemName.innerHTML);
+console.log(itemName.innerHTML.replace(" (SKU", "\n <span> (SKU"));
+itemName.innerHTML = itemName.innerHTML.replace(" (SKU", "\n <span> (SKU").replace(")", ")</span>");
+console.log(itemName.innerHTML);
     }
 }
 
