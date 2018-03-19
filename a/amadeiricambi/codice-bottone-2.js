@@ -105,7 +105,7 @@ console.log(itemName.innerHTML);
 }
 
 //questo alla fine
-ExecuteWhenSelectorHasItems(".div_product_catalog", prodottiSelector, ProdottiEditor,0);
+ExecuteWhenSelectorHasItems(".div_product_catalog", prodottiSelector, ProdottiEditor,5);
 
 ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
 
