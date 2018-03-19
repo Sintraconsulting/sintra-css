@@ -46,6 +46,7 @@ function modificaContenutoECreaBottoneIndietro(){
     for(let i = 0; i < productName.length; i++) {
       if(productName[i].innerHTML.indexOf('-') == -1) continue;
       secondPart = productName[i].textContent.split('-').pop();
+	  secondPart=secondPart.replace(' (SKU', '\n <span class="sku-class"> (SKU').replace(')', ')</span>');
       productName[i].innerHTML = productName[i].innerHTML.replace(secondPart, `<span class="second-part">${secondPart}</span>`);
     }
   }
@@ -90,22 +91,6 @@ function modificaContenutoECreaBottoneIndietro(){
   }
 }
 console.log("before setTimeout");
-
-var prodottiSelector = ".div_product_catalog .product-item .product_info";
-function ProdottiEditor() {
-    var items = document.querySelectorAll(prodottiSelector);
-    for (var i = 0; i < items.length; i++) {
-        var item = items.item(i);
-        var itemName = item.querySelector(".product-name a");
-        console.log(itemName.innerHTML);
-console.log(itemName.innerHTML.replace(" (SKU", "\n <span> (SKU"));
-itemName.innerHTML = itemName.innerHTML.replace(" (SKU", "\n <span> (SKU").replace(")", ")</span>");
-console.log(itemName.innerHTML);
-    }
-}
-
-//questo alla fine
-ExecuteWhenSelectorHasItems(".div_product_catalog", prodottiSelector, ProdottiEditor,5);
 
 ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
 
