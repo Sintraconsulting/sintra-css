@@ -94,7 +94,7 @@ console.log("before setTimeout")
 ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
 
 
-item .product_info";
+var prodottiSelector = ".div_product_catalog .product-item .product_info";
 function ProdottiEditor() {
     var items = document.querySelectorAll(prodottiSelector);
     for (var i = 0; i < items.length; i++) {
