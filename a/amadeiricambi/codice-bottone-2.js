@@ -89,10 +89,7 @@ function modificaContenutoECreaBottoneIndietro(){
     console.log("Non ho trovato i dati 'body.ecommerce-product-page' per creare il bottone per pagina precedente");
   }
 }
-console.log("before setTimeout")
-
-ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
-
+console.log("before setTimeout");
 
 var prodottiSelector = ".div_product_catalog .product-item .product_info";
 function ProdottiEditor() {
@@ -109,3 +106,6 @@ console.log(itemName.innerHTML);
 
 //questo alla fine
 ExecuteWhenSelectorHasItems(".div_product_catalog", prodottiSelector, ProdottiEditor,0);
+
+ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
+
