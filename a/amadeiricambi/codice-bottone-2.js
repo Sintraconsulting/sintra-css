@@ -74,7 +74,7 @@ function modificaContenutoECreaBottoneIndietro(){
     var isEnglish = document.querySelector(".lan_en.active");
     var isItalian = document.querySelector(".lan_it.active");
 	  
-    let prevPage = "Pagina Precedente", goToQuotation = "Richiedi un Preventivo", selector = "Preventivi";
+    let prevPage = "Pagina Precedente", goToQuotation = "Richiedi un Preventivo", selector = "Richiedi un Preventivo";
     if (isEnglish) {
         prevPage = "Previous Page";
 		goToQuotation = "Estimates";
@@ -92,3 +92,17 @@ function modificaContenutoECreaBottoneIndietro(){
 console.log("before setTimeout")
 
 ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
+
+
+item .product_info";
+function ProdottiEditor() {
+    var items = document.querySelectorAll(prodottiSelector);
+    for (var i = 0; i < items.length; i++) {
+        var item = items.item(i);
+        var itemName = item.querySelector(".product-name a");
+        itemName.innerHTML = itemName.innerHTML.replace(" (SKU", "\n <span> (SKU").replace(")", ")</span>");
+    }
+}
+
+//questo alla fine
+ExecuteWhenSelectorHasItems(".div_product_catalog", prodottiSelector, ProdottiEditor,0);
