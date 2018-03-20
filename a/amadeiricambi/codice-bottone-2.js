@@ -45,9 +45,9 @@ function modificaContenutoECreaBottoneIndietro(){
         
     for(let i = 0; i < productName.length; i++) {
       if(productName[i].innerHTML.indexOf('-') == -1) continue;
-      secondPart = productName[i].textContent.split('-').pop();
-	  secondPart=secondPart.replace(' (SKU', '\n <span class="sku-class"> (SKU').replace(')', ')</span>');
-      productName[i].innerHTML = productName[i].innerHTML.replace(secondPart, `<span class="second-part">${secondPart}</span>`);
+      secondPart_ = productName[i].textContent.split('-').pop();
+	  secondPart = secondPart_.replace(' (SKU', '\n <span class="sku-class"> (SKU').replace(')', ')</span>');
+      productName[i].innerHTML = productName[i].innerHTML.replace(secondPart_, `<span class="second-part">${secondPart}</span>`);
     }
   }
   
