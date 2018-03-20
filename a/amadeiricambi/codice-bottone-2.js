@@ -41,13 +41,14 @@ function modificaContenutoECreaBottoneIndietro(){
   // Divide product name
   if(document.querySelector('.product-name a')) {
     let productName = document.querySelectorAll('.product-name a'),
-        secondPart = undefined;
+        toReplace = undefined;
         
     for(let i = 0; i < productName.length; i++) {
-      if(productName[i].innerHTML.indexOf('-') == -1) continue;
-      secondPart_ = productName[i].textContent.split('-').pop();
-	  secondPart = secondPart_.replace(' (SKU', '\n <span class="sku-class"> (SKU').replace(')', ')</span>');
-      productName[i].innerHTML = productName[i].innerHTML.replace(secondPart_, `<span class="second-part">${secondPart}</span>`);
+      if(productName[i].innerHTML.indexOf('-') == -1) 
+		  continue;
+      toReplace = productName[i].textContent.split('-').pop();
+	  toReplaceWith = toReplace.replace(' (SKU', '\n <span class="sku-class"> SKU').replace(')', '</span>');
+      productName[i].innerHTML = productName[i].innerHTML.replace(toReplace, `<span class="second-part">${toReplaceWith}</span>`);
     }
   }
   
