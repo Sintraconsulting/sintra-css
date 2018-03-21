@@ -30,7 +30,7 @@ function ModificaSchedaProdotto() {
     var mainNode = document.querySelector(".ecommerce-product-page .object_content");
     //var backGroundImageNode = document.querySelector(".ecommerce-product-page .product_ttil");
 
-    var span = mainNode.querySelector("span");
+    //var span = mainNode.querySelector("span");
 /*
     var productTitleNode = mainNode.querySelector(".category-product>h3");
     var productTitle = productTitleNode.textContent.trim();
@@ -195,4 +195,4 @@ console.log("before setTimeout");
 ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
 
 var schedaProdottoSelector = ".ecommerce-product-page .object_content .product_info";
-ExecuteWhenSelectorHasItems(".ecommerce-product-page", schedaProdottoSelector, ModificaSchedaProdotto,0);
+ExecuteWhenSelectorHasItems(".ecommerce-product-page", schedaProdottoSelector, ModificaSchedaProdotto,20);
