@@ -26,6 +26,105 @@ function ExecuteWhenSelectorHasItems(baseSelector, selector, action,limit) {
     }
     check();
 }
+function ModificaSchedaProdotto() {
+    var mainNode = document.querySelector(".ecommerce-product-page .object_content");
+    //var backGroundImageNode = document.querySelector(".ecommerce-product-page .product_ttil");
+
+    var span = mainNode.querySelector("span");
+/*
+    var productTitleNode = mainNode.querySelector(".category-product>h3");
+    var productTitle = productTitleNode.textContent.trim();
+    span.insertBefore(createElement("h3", "product-name-top", productTitle), span.childNodes[0]);
+*/
+    var productCode = "";
+    var productCodeNode = mainNode.querySelector(".product_info .product_code");
+    if (productCodeNode != null) {
+        //productCode = productCodeNode.textContent.trim().replace("Codice: ", "").replace("Code: ","");
+		
+        productCodeNode.textContent = productCodeNode.textContent.trim().replace("Codice: ", "").replace("Code: ","");
+       // span.insertBefore(createElement("div", "product-code-top", productCode), span.childNodes[0]);
+    }
+    /*var priceContainer = createElement("p", "price-container", "");
+    var standardPriceClass = "product-price-top";
+    
+    var productDiscountPriceNode = mainNode.querySelector(".product_info .product_price .price-special");
+    
+    var productStandardPriceNode = mainNode.querySelector(".product_info .product_price .price-original");
+    if(productStandardPriceNode == null)
+        productStandardPriceNode = mainNode.querySelector(".product_info .product_price .price");
+        
+    if(productDiscountPriceNode != null){
+        standardPriceClass = "product-price-old";
+        var productPrice = productDiscountPriceNode.textContent;
+        priceContainer.appendChild(createElement("span", "product-price-top", productPrice));
+        console.log("Disc: "+productPrice);
+    }
+    if (productStandardPriceNode != null) {
+        var productPrice = productStandardPriceNode.textContent;
+        priceContainer.appendChild(createElement("span", standardPriceClass, productPrice));
+        console.log("Standard: "+productPrice);
+    }
+    span.appendChild(priceContainer);
+
+    var prodTagsContainer = createElementWithHtmlContent("div", "product-tags-container", "");
+    var tags = ["vintage", "wood", "imperfections", "metal", "leather"];
+    var tagsCaptions = ["Oggetto 100% vintage", "Interamente in legno pregiato", "Presenta imperfezioni","Metallo","Interamente in pelle"];
+    var tagsCaptionsEn = ["100% vintage", "High quality wood", "Has imperfections","Metalic","Made of leather"];
+    for (var i = 0, len = tags.length; i < len; i++) {
+        var tag = tags[i]; 
+		var caption=tagsCaptions[i];
+		if(language=="en")
+		caption=tagsCaptionsEn[i];
+        var tagNode = createElementWithHtmlContent("div", "product-tag-image tooltip-div " + tag + "-tag-image",
+"<img src=\"http://css2.sintraconsulting.it/r/rustydusty/" + tag + ".png\"/><span class=\"tooltiptext\">" + caption+ "</span>");
+        prodTagsContainer.appendChild(tagNode);
+    }
+
+    span.appendChild(prodTagsContainer);
+    var rentCaption = "Noleggia";
+    if (language == "en")
+        rentCaption = "Rent";
+    var href = "../../noleggia.html";
+    if (language == "en")
+        href = "../../rent.html";
+    var noleggiaAnchor = createElement("a", "noleggia-top-button btn-primary", rentCaption);
+
+    var href = rootUrl + "noleggia.html";
+    if (language == "en")
+        href = rootUrl + "en/rent.html";
+    href += "?productKey=" + productCode + "&productCaption=" + productTitle;
+    noleggiaAnchor.href = href;
+
+    var noleggiaAnchorContainer = createElement("div", "noleggia-top-button-container", "");
+	noleggiaAnchorContainer.appendChild(noleggiaAnchor);
+    span.appendChild(noleggiaAnchorContainer);
+
+    var shareContainer = createElementWithHtmlContent("div", "product-share-icons", "");
+
+    var shareCaption = "Condividi:";
+    if (language == "en")
+        shareCaption = "Share:";
+
+    shareContainer.appendChild(createElement("span", "product-share-caption", shareCaption));
+
+    var shares = ["facebook"];
+    var sharesPng = ["group-13"];
+    var sharesURL = ["https://www.facebook.com/sharer/sharer.php?u=#####"];
+
+    for (var j = 0; j < shares.length; j++) {
+        var a = createElementWithHtmlContent("a", "share-item", "<img class=\"share-icon\" src=\"http://css2.sintraconsulting.it/r/rustydusty/" + sharesPng[j] + ".png\"/>");
+        a.href = sharesURL[j].replace("#####", window.location);
+        shareContainer.appendChild(a);
+    }
+
+    span.appendChild(shareContainer);
+
+    var imgSrc = mainNode.querySelector("img").src;
+    //backGroundImageNode.style = "background-image:url('" + imgSrc + "');";
+    backGroundImageNode.setAttribute("style", "background-image:url('" + imgSrc + "');");
+*/
+    //SpostaGalleriaNelHeader(span);
+}
 function createButton(content,href,onclick,css_class1,css_class2){
     let backElem = document.createElement('a'),
         backElemNode = document.createTextNode(content);
@@ -95,3 +194,5 @@ console.log("before setTimeout");
 
 ExecuteWhenSelectorHasItems("body.ecommerce-product-page","body.ecommerce-product-page",modificaContenutoECreaBottoneIndietro,20);
 
+var schedaProdottoSelector = ".ecommerce-product-page .object_content .product_info";
+ExecuteWhenSelectorHasItems(".ecommerce-product-page", schedaProdottoSelector, ModificaSchedaProdotto,0);
