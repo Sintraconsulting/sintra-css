@@ -41,7 +41,7 @@ function ModificaSchedaProdotto() {
     if (productCodeNode != null) {
         //productCode = productCodeNode.textContent.trim().replace("Codice: ", "").replace("Code: ","");
 		
-        productCodeNode.textContent = productCodeNode.textContent.trim().replace("Codice: ", "").replace("Code: ","");
+        productCodeNode.textContent = productCodeNode.textContent.trim().replace("Codice: ", "").replace("Code: ","").trim();
        // span.insertBefore(createElement("div", "product-code-top", productCode), span.childNodes[0]);
     }
     /*var priceContainer = createElement("p", "price-container", "");
